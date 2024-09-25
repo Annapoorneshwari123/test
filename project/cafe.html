@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cafe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+          @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .pic{
+            width: 100%;
+            min-height: 100%;
+            background-image: url(https://www.tooplate.com/templates/2126_antique_cafe/img/antique-cafe-bg-01.jpg);
+            padding: 20px;
+        }
+            
+        
+        header{
+            margin-right: 100px;
+            background-color: rgba(0, 0, 0, 0.073);
+            
+        }
+        nav ul{
+            display: flex;
+            align-items:center;
+            justify-content: end;
+            gap:35px;
+           
+        }
+        ul li{
+            padding: 15px;
+           margin: 20px 10px;  
+        }
+        ul :hover{
+           border-bottom: 4px solid rgb(222, 133, 97);
+        }
+        ul li a{
+            font-size: 1.5rem;
+           color:rgb(222, 133, 97);
+            text-decoration: none;
+        }
+        main{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           
+        }
+        .main .one{
+            width:350px;
+            height: 130px;
+            background-color: rgba(4, 4, 4, 0.579);
+            color:#fff;
+            margin: auto;  
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            line-height: 2.5rem;
+        }
+        
+        .main .two{
+            width:350px;
+            height: 230px;
+            background-color: rgba(4, 4, 4, 0.579);
+            color:#fff;
+            margin: auto; 
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .subtitle{
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+        .main .three{
+            width: 350px;
+            height: 100px;
+            margin: auto;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .three .main-btn{
+            border: none;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.397);
+        }
+        .main-btn i{
+            font-size: 17px;
+            color:rgb(222, 133, 97);
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .main-btn i:hover{
+            color: #fff;
+        }
+        .pic1{
+            
+            width: 100%;
+            min-height: 100%;
+            background-image: url(https://www.tooplate.com/templates/2126_antique_cafe/img/antique-cafe-bg-02.jpg);
+            padding: 20px;
+        }
+        .dish{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap:20px;
+            
+        }
+        .left{
+           width:400px;
+           background-color:#544639;
+           padding: 20px;
+           border-radius: 20px;
+
+        }
+        .right{
+           width:400px;
+           background-color: #544639;
+           padding: 20px;
+           border-radius: 20px;
+        }
+        .heading{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+            margin-bottom: 50px;
+
+        }
+        .heading h1{
+            background-color: rgb(255, 255, 255);
+            padding:25px 50px;
+            color:rgb(52, 32, 5);
+            font-size: 2rem;
+            border-radius: 10px;
+        }
+        .inside{
+            display: flex;
+            gap:15px;
+            align-items: center;
+            justify-content: start;
+        }
+        .inside img{
+            padding: 10px;
+        }
+        img{
+            border-radius: 20px;
+        }
+        .outside h2{
+            color:rgb(166, 101, 15)
+        }
+        .outside p{
+            line-height: 2rem; 
+            font-size: 1.1rem; 
+            color: #fff; 
+        }
+        .pic2{
+            width: 100%;
+            min-height: 100%;
+            background-image: url(https://www.tooplate.com/templates/2126_antique_cafe/img/antique-cafe-bg-03.jpg);
+            padding: 20px;
+        }
+        .l1{
+            width: 600px;
+            height: 360px;
+            background-color: #ffffffbb;
+            padding: 20px;
+            margin:10px 100px;
+            border-radius: 10px;
+       
+        }
+        .l1 .subtitle{
+            padding: 20px;
+            line-height: 2rem;
+        }
+        
+        .l2 .main-btn{
+            padding: 20px 20px;
+            margin-left:100px ;
+            border-radius: 5px;
+            background-color: rgb(72, 128, 128);
+            border:none;
+            
+        }
+        .l2 .main-btn i{
+            color:#fff;
+            
+        }
+        .main-btn:hover{
+              background-color:rgb(94, 172, 172) ;
+              cursor: pointer;
+              transition: 0.5s;
+        }
+        .pic3{
+            width: 100%;
+            min-height: 100%;
+            background-image: url(https://www.tooplate.com/templates/2126_antique_cafe/img/antique-cafe-bg-04.jpg);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:70px;
+        }
+        .lft1{
+            width: 500px;
+            height:450px;
+            background-color: rgba(255, 255, 255, 0.73);
+            padding: 30px;
+            border-radius: 10px;
+            
+        }
+        .rgt1{
+            width: 450px;
+            height:450px;
+            background-color: rgba(0, 0, 0, 0.555);
+        }
+        .lft1 .main-btn{
+            border: none;
+            padding: 30px 70px;
+            margin-top: 30px;
+            background-color: rgb(21, 133, 131);
+            border-radius: 10px;
+            margin-left: 100px;
+        }
+        .lft1 .main-btn i{
+            color: #fff;
+        }
+        .lft1 p{
+            font-size: 20px;
+            padding: 0px 20px;
+        }
+        .btn-color{
+            color:orange;
+            border:none;
+            background-color: rgba(0, 0, 0, 0.36);
+            padding: 25px 40px;
+            border-radius: 10px;
+        }
+        .btn-color:hover{
+            color:#fff;
+        }
+        .rgt1{
+            border-radius: 10px;
+            margin-left: 90px;
+        }
+        .rgt1 form{
+            padding: 30px;
+            
+        }
+        form input ,textarea{
+           padding: 10px;
+           padding-right: 200px;
+           
+            border:none;
+            border-bottom: 1px solid orange;
+            background-color: rgba(0, 0, 0, 0.36);
+        }
+        form input:hover,textarea:hover{
+            border: 1px solid orange;
+            box-shadow: 0px 0px 5px orange;
+        }
+        .main .subtitle a{
+            color:yellow;
+            text-decoration: none;
+        }
+        .main .subtitle a:hover{
+             color:rgb(24, 233, 212);
+        }
+        .pic3 .lft1 .main-btn:hover{
+            background-color: rgb(41, 177, 185);
+        }
+    </style>
+</head>
+<body>
+    <section class="pic">
+        <header>
+            <nav>
+                <ul type="none">
+                    <li><a href="#">Intro</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+
+    <section class="main">
+        <div class="one">
+            <h1 style="font-size: 30px;font-family: oswald; ">Antique Cafe</h1>
+            <h3 style="color:rgb(222, 133, 97) ;">your daily energy booster</h3>
+        </div>
+        <div class="two">
+            <p class="subtitle">This is a coffee shop template named Antique Cafe which is a parallax HTML5 template with a good responsiveness. Feel free to use this layout for your cafe. If you have any question, please <a href="#">send us a message</a>.</p>
+        </div>
+        <div class="three">
+            <button class="btn-color"><i class="fa-solid fa-mug-saucer"> Let Explore...</i></button>
+        </div>
+    </section>
+</section>
+
+
+<section class="pic1">
+    <section class="menu">
+        <div class="heading">
+            <h1>Our Cafe Menu</h1>
+        </div>
+        <div class="dish">
+            <div class="left">
+                <div class="inside">
+                    <img src="https://www.tooplate.com/templates/2126_antique_cafe/img/menu-item-1.jpg" alt="" >
+                    <div class="outside"><h2>Hot Cappuccino</h2>
+                        <p>S $8.50
+                        L $10.50</p></div>
+                    </div>
+                <div class="inside"><img src="https://www.tooplate.com/templates/2126_antique_cafe/img/menu-item-2.jpg" alt="">
+                    <div class="outside"><h2>Hot Americano</h2>
+                        <p>S $9.50 
+                            L $12.50</p></div>
+                    </div>
+                <div class="inside"><img src="https://www.tooplate.com/templates/2126_antique_cafe/img/menu-item-3.jpg" alt="">
+                    <div class="outside"><h2>Hot Latte </h2>
+                        <p>M $11.75
+                            L $14.75</p></div>
+                        </div>
+                <div class="inside">
+                    <img src="https://www.tooplate.com/templates/2126_antique_cafe/img/menu-item-4.jpg" alt="">
+                    <div class="outside"><h2>Hot Espresso </h2>
+                        <p>M $11.75 
+                            L $14.75</p></div></div>
+            </div>
+            <div class="right">
+                <div class="inside"><img src="https://www.tooplate.com/templates/2126_antique_cafe/img/menu-item-5.jpg" alt="">
+                <div class="outside">
+                    <h2>Iced Cappuccino</h2>
+                    <p>Small $10
+                        Large $15</p></div></div>
+                <div class="inside"><img src="https://www.tooplate.com/templates/2126_antique_cafe/img/menu-item-6.jpg" alt="">
+                    <div class="outside">
+                        <h2>Iced Americano</h2>
+                        <p>Small $12.50
+                            Large $16.50</p></div></div>
+                <div class="inside"><img src="https://www.tooplate.com/templates/2126_antique_cafe/img/menu-item-7.jpg" alt="">
+                    <div class="outside">
+                        <h2>Iced Milky Latte</h2>
+                        <p>Small $14
+                            Large $18</p></div></div>
+                <div class="inside"><img src="https://www.tooplate.com/templates/2126_antique_cafe/img/menu-item-8.jpg" alt="">
+                    <div class="outside">
+                        <h2>Iced Espresso</h2>
+                        <p>Small $10
+                            Large $15</p></div></div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<section class="pic2">
+    <section>
+        <div class="l1">
+            <h1 style="color: rgb(72, 145, 145);font-size: 2rem;line-height: 2rem;margin:20px">About our cafe</h1>
+            <p class="subtitle">Images are taken from Pexels, a great stock photo website. This template used Tailwind CSS. You may modify Antique Cafe template in any way you prefer and use it for your website. <br><br>If you wish to <span style="color: rgb(72, 145, 145);">support us</span>, please make a little donation via PayPal. That would be very helpful. Another way is to tell your friends about Tooplate website. Thank you.</p>
+        </div>
+        <div class="l2">
+            <button class="main-btn"><i class="fa-solid fa-comments"> Contact</i></button>
+        </div>
+    </section>
+</section>
+
+<section class="pic3">
+        <div class="cont">
+            <div class="lft1">
+                <h1 style="color: rgb(72, 145, 145);font-size: 2rem;line-height: 2rem;margin:20px">Contact Us</h1>
+                <p class="subtitle">Praesent tellus magna, consectetur sit amet volutpat eu, pulvinar vitae sem. Sed ultrices. bg white 80% alpha. btn #066<br><br></p>
+                <p>Tel: <span style="color:darkcyan">010-020-0340</span><br><br>
+                    Email: <span style="color:darkcyan">info@company.com</span></p>
+            
+                <button class="main-btn"><i class="fa-solid fa-map-location">  Open Maps</i></button>
+            </div>
+            </div>
+            <div class="rgt1">
+               <form>
+                <label for="Name"></label>
+                <input type="text" id="Name" placeholder="Name" required>
+                <br><br>
+                <label for="text"></label>
+                <input type="text"  id="text" placeholder="Email" required>
+                <br><br>
+                <label for="msg"></label>
+                <textarea name="msg" rows="10" cols="19" placeholder="Message"></textarea>
+                <br><br>
+
+                <button class="btn-color">Send it</button>
+               </form>
+            </div>
+        </div>
+    
+</section>
+
+</body>
+</html>

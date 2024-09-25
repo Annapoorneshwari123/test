@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .main{
+            height: 100vh;
+            width:100%;
+            display: flex;
+        }
+        .header{
+             height: 100vh;
+             width: 80px;
+             background-color: rgb(255, 255, 255);
+             border: 1px solid #ccc;
+        }
+        .header ul{
+            list-style-type:none;
+            padding: 0px;
+            text-align: center;
+            color: rgb(17, 16, 16);
+            padding-top: 20px;
+
+        }
+        .header ul li{
+            width: 45px;
+            height: 45px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-bottom: 20px;
+            border-radius:100px ;
+            cursor: pointer;
+        }
+        .header ul li i{
+              font-size: 1.6rem;
+        }
+        .second{
+            flex: 4 !important;
+            /* width: 100%; */
+            height: 100vh;
+            background-color: rgba(248, 248, 248, 0.507);  
+            border: 1px solid #ccc;
+
+        }
+        .seco-main{
+            margin: 10px;
+        }
+        .name{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px;
+            margin-top: 28px;
+
+        }
+        .name i{
+            font-size: 1.4rem;
+        }
+        .pic{
+            display: flex;
+            align-items: center;
+            gap:8px;
+        }
+        .pic img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50px;
+            margin-top: 20px;
+            margin: 10px;
+        }
+        .lab{
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+            margin: 10px;
+            margin-top: 20px;
+        }
+        .chat{
+            display: flex;
+            align-items: center;
+            padding: 5px 15px;
+            gap:10px;
+            margin-bottom: 15px;
+        }
+        .chat img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+
+        }
+        .chat:hover{
+            background-color: rgb(212, 212, 212);
+        }
+        .last{
+           flex: 9;
+           height: 100vh;
+           background-color: #fff;
+           border: 1px solid #ccc;
+           
+        }
+        .last{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .last div img{
+            width:300px;
+        }
+        .last div{
+            margin-top: 150px;
+        }
+        .last h1{
+            font-size: 2rem;
+            font-weight: 100;
+        }
+        .last p{
+            color: rgb(133, 129, 129);
+        }
+        .main-btn{
+            margin-top: 30px;
+            padding: 10px 30px;
+            border: none;
+            background-color: #2656c6;
+            color: #fff;
+            border-radius: 8px;
+        }
+        .main-btn:hover{
+            box-shadow: 0px 3px 5px #ccc;
+            cursor: pointer;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <section class="main">
+        <div class="header">
+            <ul>
+            <li><i class="fa-brands fa-instagram"></i></li><br><br>
+            <li><i class="fa-solid fa-house"></i></li>
+            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+            
+            <li><i class="fa-regular fa-compass"></i></li>
+            <li><i class="fa-regular fa-comment"></i></li>
+           <li> <i class="fa-regular fa-heart"></i>
+           </li>
+        </ul>
+
+        </div>
+        <div class="second">
+            <div class="seco-main">
+                <div class="name">
+                    <h1>angle_412 <i class="fa-solid fa-caret-down"></i></h1>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </div>
+
+                <div class="pic">
+
+                    <img src="https://th.bing.com/th/id/OIP.CAbTaFvo9r1nh2uSZgd5yAAAAA?w=191&h=191&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="loading..">
+                    <img src="https://th.bing.com/th/id/OIP.CiocBn_QWuIIZmHwWBRinwHaHa?w=191&h=191&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="loading..">
+                    <img src="https://th.bing.com/th/id/OIP.Bo3dolEVbWc1UZv_l3_q5gHaHa?w=205&h=205&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="wait..">
+                    
+                    </div>
+
+                    <div class="lab">
+                        <h2>Messages</h2>
+                        <h3>requests</h3>
+                    </div>
+
+                    <div class="chat">
+                        <img src="https://www.australianrefugee.org/wp-content/uploads/2023/07/blank-board-circle.jpg" alt="wait..">
+                        <div class="text">
+                            <p><b>varsha</b></p>
+                            <small>Lorem, ipsum </small>
+                        </div>
+                        </div>
+                        <div class="chat">
+                            <img src="https://www.australianrefugee.org/wp-content/uploads/2023/07/blank-board-circle.jpg" alt="wait..">
+                            <div class="text">
+                                <p><b>Hema</b></p>
+                                <small>Lorem, ipsum </small>
+                            </div>
+                            </div>
+                            <div class="chat">
+                                <img src="https://www.australianrefugee.org/wp-content/uploads/2023/07/blank-board-circle.jpg" alt="wait..">
+                                <div class="text">
+                                    <p><b>Preethi kumari</b></p>
+                                    <small>Lorem, ipsum </small>
+                                </div>
+                                </div>
+                                <div class="chat">
+                                    <img src="https://www.australianrefugee.org/wp-content/uploads/2023/07/blank-board-circle.jpg" alt="wait..">
+                                    <div class="text">
+                                        <p><b>Suma</b></p>
+                                        <small>Lorem, ipsum </small>
+                                    </div>
+                                    </div>
+                                    <div class="chat">
+                                        <img src="https://www.australianrefugee.org/wp-content/uploads/2023/07/blank-board-circle.jpg" alt="wait..">
+                                        <div class="text">
+                                            <p><b>Sufiya</b></p>
+                                            <small>Lorem, ipsum </small>
+                                        </div>
+                                        </div>
+                                        <div class="chat">
+                                            <img src="https://www.australianrefugee.org/wp-content/uploads/2023/07/blank-board-circle.jpg" alt="wait..">
+                                            <div class="text">
+                                                <p><b>Anu</b></p>
+                                                <small>Lorem, ipsum </small>
+                                            </div>
+                                            </div>
+                                            
+                </div>
+            </div>
+        </div>  
+        
+        <div class="last">
+            <div>
+                <img src="https://thumbs.dreamstime.com/b/print-194801709.jpg" alt="wait..">
+               <h1>Your messages</h1>
+               <p >Send a message to start a chat</p>
+               <button class="main-btn">Send Message</button>
+           </div>
+
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+        }
+
+        .main {
+            min-height: 100vh;
+            background-color: rgb(5, 12, 9);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #d8d8d802;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #ebebeb;
+            font-weight: 600;
+        }
+
+        header nav ul .active a {
+            color: #3ec47a;
+        }
+
+        .main-btn {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 100px;
+            color: #fff;
+            background-color: #007233;
+        }
+        .main-btn:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .blur1 {
+            width: 300px;
+            height: 100%;
+            background-color: #7afcb536;
+            position: absolute;
+            filter: blur(200px);
+            left: 0px;
+            top: 0;
+            z-index: -1;
+        }
+
+        .blur2 {
+            width: 300px;
+            height: 100%;
+            background-color: #88f7ba36;
+            position: absolute;
+            filter: blur(200px);
+            right: 0px;
+            top: 0;
+        }
+
+        .blur3 {
+            width: 200px;
+            height: 200px;
+            background-color: #39ff9294;
+            position: absolute;
+            filter: blur(90px);
+            left: 0px;
+            top: 0;
+        }
+
+        .blur4 {
+            width: 200px;
+            height: 200px;
+            background-color: #39ff9294;
+            position: absolute;
+            filter: blur(90px);
+            right: 300px;
+            top: 300px;
+        }
+
+        .heading {
+            color: #fff;
+            font-size: 4rem;
+        }
+
+        .hero {
+            z-index: 10;
+            display: flex;
+        }
+
+        .hero-left {
+            padding: 5%;
+            flex: 1;
+        }
+
+        .hero-right {
+            position: relative;
+            flex: 1;
+            z-index: 10;
+        }
+
+        .card {
+            margin-top: 70px;
+            transform: translateY(50px);
+        }
+
+        .finger {
+            position: absolute;
+            top: 375px;
+            right: 310px;
+        }
+
+        .hand {
+            z-index: -1;
+            transform: translateX(50px);
+            position: absolute;
+            right: 51px;
+            bottom: -95px;
+        }
+
+        .circle {
+            position: absolute;
+            right: 350px;
+            bottom: 0px;
+            animation: rotate-anim 5s linear infinite;
+        }
+
+        .arrow {
+            position: absolute;
+            right: 396px;
+            bottom: 40px;
+            animation: moving-anim 1.5s linear infinite alternate;
+        }
+
+        @keyframes rotate-anim {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes moving-anim {
+            0% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(10px);
+            }
+        }
+
+        .text-green {
+            color: #3ec47a;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: gray;
+            font-weight: 600;
+        }
+
+        .profiles {
+            padding: 10px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .images {
+            display: flex;
+            gap: 5px;
+        }
+
+        .images img {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #fff;
+            border-radius: 100px;
+        }
+
+        .images img:nth-child(2) {
+            transform: translateX(-25px);
+        }
+
+        .images img:nth-child(3) {
+            transform: translateX(-50px);
+        }
+
+        .heading2 {
+            color: lightgray;
+            font-size: 2rem;
+        }
+
+        .rating {
+            padding: 10px 15px;
+            border: 1px solid #3ec47a52;
+            min-width: 240px;
+            border-radius: 10px;
+        }
+
+        .icons {
+            display: flex;
+            margin-top: 10px;
+            gap: 5px;
+        }
+
+        .icons .subtitle {
+            margin-left: 20px;
+        }
+        .label .heading{
+            text-align: center;
+            margin-top: 80px;
+            font-size: 45px;
+        }
+        .labels{
+            width: 100%;
+            min-height:300px ;
+            
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            gap:20px;
+            justify-content: center;
+            
+        }
+        .label1,.label2,.label3,.label4{
+            width: 280px;
+            height: 180px;
+            border:2px solid #007233;
+            border-radius: 10px;
+            padding: 35px; 
+            margin-top: 30px;
+            background-image: url(https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66ceafd0134dcce6e3af17b8_Number%20Bg.svg);
+        }
+        .labels p{
+            font-size: 20px;
+            /* color: #fff; */
+        }
+        .labels,.abt-right h1{
+            font-size: 40px;
+            /* color: #fff; */
+        }
+        .about{
+            display: flex;
+            align-items:start;
+            justify-content: center;
+            padding: 20px 150px;
+            gap:30px;
+        }
+        .abt-left{
+            flex:1;
+        }
+        .abt-right{
+            flex:1;
+        }
+        .abt-right .heading ,ul{
+            padding: 25px 0px;
+        }
+        ul li{
+            font-size: 18px;
+            line-height: 2.8rem;
+
+        }
+        ul li::marker{
+            color: #0c8442;
+        }
+        .abt-left img{
+            border-radius: 20px;
+        }
+        .labels .label5,.label6,.label7{
+            width: 400px;
+            height: 270px;
+            border:2px solid #007233;
+            border-radius: 10px;
+            padding: 35px; 
+            margin-top: 30px; 
+        }
+        .labels h6 .subtitle{
+            line-height: 2rem;
+            padding: 10px;
+        }
+        .labels h6{
+            margin: 15px 0px;
+        }
+        .label5:hover,.label6:hover,.label7:hover{
+            transform: translateY(-20px);
+        }
+        .marquee {
+            text-align: center;
+            padding: 30px;
+
+        }
+        .marquee .subtitle{
+            font-size: 30px;
+            margin: 50px;
+
+        }
+        .success {
+            text-align: center;
+            margin-top: 100px;
+        }
+        .imgs{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:30px;
+        }
+        .imgs img{
+            margin: 30px 20px;
+            border-radius: 20px;
+        }
+        .success .subtitle{
+            margin:20px;
+        }
+        .success h1{
+            font-size: 40px;
+            letter-spacing: 0.1rem;
+        }
+        .imgs h2:hover, i:hover{
+            color: #0c8442;
+        }
+        .imgs img:hover{
+            transform:rotate(5deg);
+            transition: 1s;
+            border-radius: 0px;
+        }
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 100px;
+            margin-top: 90px;
+            background-color: #0b0b0b;
+            
+        }
+        .lft{
+            flex:1;
+            margin: 10px 40px;
+        }
+        .rgt{
+            flex:1;
+            display: flex;  
+        }
+        .first ,.second ,.third{
+            flex:1; 
+        }
+        .first ul li,.second ul li,.third ul li{
+            list-style-type: none;
+            gap:30px;
+        }
+        .lft p{
+            padding:30px 0px;
+        }
+        .icons{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap:20px;
+            background-color: rgb(8, 8, 14);
+        }
+        .lft1 h2{
+            font-size: 20px;
+            font-weight: 300;
+            color: gray;
+        }
+        .rgt1 ul li {
+            
+            list-style-type: none;
+            display: inline;
+        }
+        .rgt1 ul li i{
+            font-size: 20px;
+           letter-spacing: 20px;
+        }
+
+       
+
+
+
+        
+    </style>
+
+    <!-- link for aos animation  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- link for fonts or icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section class="main">
+        <div class="blur1"></div>
+        <div class="blur2"></div>
+        <div class="blur3"></div>
+        <div class="blur4"></div>
+        <header>
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2874d2aa7563e97ed6_Nav%20Logo.svg"
+                alt="loading">
+
+            <nav>
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Price</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+
+            <button class="main-btn">Contact Us</button>
+        </header>
+
+        <div class="hero">
+            <div class="hero-left">
+                <h1 class="heading">
+                    Transform your <br><span class="green-text">finances</span> with <br>trusted <br>accountants.
+                </h1>
+                <p class="subtitle">Rorem ipsum dolor sit amet consectetur. Blandit varius tellus sed <br>maecenas
+                    tortor
+                    ut.</p>
+                    <br>
+                <button class="main-btn">Contact Us</button>
+                <div class="profiles">
+                    <div class="images">
+                        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d29bea7984c4ada2d89_Reviwe%20Image%203.png"
+                            alt="profiles">
+                        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d299ec3635f82eca371_Reviwe%20Image%202.png"
+                            alt="profiles">
+                        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66ce9c56c5ddf62e1ec8162e_ratting%20img.svg"
+                            alt="profiles">
+                    </div>
+                    <div>
+                        <h1 class="heading2">245K</h1>
+                        <p class="subtitle">Our Client</p>
+                    </div>
+
+                    <div class="rating">
+                        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2874d2aa7563e97ed6_Nav%20Logo.svg"
+                            alt="loading...">
+                        <div class="icons">
+                            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2aef411ecb7d3242cb_Ster%20Icon%201.svg"
+                                alt="loading"><img
+                                src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2aef411ecb7d3242cb_Ster%20Icon%201.svg"
+                                alt="loading"><img
+                                src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2aef411ecb7d3242cb_Ster%20Icon%201.svg"
+                                alt="loading"><img
+                                src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2aef411ecb7d3242cb_Ster%20Icon%201.svg"
+                                alt="loading"><img
+                                src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2a06b0d169d1a0117d_Ster%20Icon%202.svg"
+                                alt="loading">
+                            <p class="subtitle">5.0/4.50</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="hero-right">
+                <img class="card"
+                    src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66e1229e10bf16edba66dfd9_card.svg"
+                    alt="">
+
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66ce9f60349b0256f938d50f_Hand.svg"
+                    alt="" class="hand">
+
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66ce9f60c77b20539a8a0da3_Finger.svg"
+                    alt="" class="finger">
+
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2734818b4d505af5ae_Hero%20Icon.svg"
+                    alt="" class="circle">
+
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d251c4d550202c87a36_Dowon%20%20Icon.svg"
+                    alt="" class="arrow">
+            </div>
+        </div>
+
+        <div class="label">
+            <h1 class="heading">Important metrics <span class="text-green">reflecting</span> <br>our expertis.
+                <div class="labels">
+                    <div class="label1">
+                        <h1>15k</h1>
+                        <p>Happy clients</p>
+                    </div>
+                   
+                    <div class="label2">
+                        <h1>10k</h1>
+                        <p>Team members</p>
+                    </div>
+                    <div class="label3">
+                        <h1>100%</h1>
+                        <p>Customer satisfaction</p>
+                    </div>
+                    <div class="label4">
+                        <h1>20 year</h1>
+                        <p>Years in Business</p>
+                    </div>
+                </div>
+            </h1>
+        </div>
+
+        <div class="about">
+            <div class="abt-left">
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d27674488656088fc87_Home%20About%20Image-p-800.jpg" alt="loading..." width="550" height="500">
+
+            </div>
+            <div class="abt-right">
+                <h3><span class="text-green">About us </span></h3>
+                <h1 class="heading">Experience professional <br><span class="text-green">accounting</span> with personal <br> touch.</h1>
+                <p class="subtitle">Gorem ipsum dolor sit amet consectetur. Sed nec eu ullamcorper   </p>             
+                <ul>
+                    <li>Egestas non morbi blandit convallis.</li>
+                    <li>Ornare aliquet enim in semper consequat nibh.</li>
+                    <li>Euismod molestie augue sed sem nibh erat.</li>
+                </ul>
+
+            <button class="main-btn"> More About Us</button>
+            </div>
+        </div>
+
+        <div class="label">
+            <h1 class="heading">Efficient accounting services <br> for <span class="text-green">business growth.</span>
+            <p class="subtitle">Leo tincidunt viverra id tincidunt nam. Leo cursus mattis nisi accumsan faucibus <br> mauris ut fames.</p>
+            <div class="labels">
+                <div class="label5">
+                    <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd3835/66c9ac27a43762e556ae10e5_Service%20Icon%206.svg" alt="wait..">
+                    <h6>Tax Planning</h6>
+                    <p class="subtitle">The Alico - Insurance Agency WordPress Theme  is a  WordPress  theme designed for</p>
+                </div>
+                <div class="label6">
+                    <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd3835/66c9ac1aa43762e556ae05f0_Service%20Icon%205.svg" alt="wait..">
+                    <h6>Payroll Management</h6>
+                    <p class="subtitle">The Alico - Insurance Agency WordPress Theme  is a  WordPress  theme designed for</p>
+                </div>
+                <div class="label7">
+                    <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd3835/66c9ac0b5b2b208a64f87b2b_Service%20Icon%204.svg" alt="wait..">
+                    <h6>Bookkeeping Services</h6>
+                    <p class="subtitle">The Alico - Insurance Agency WordPress Theme  is a  WordPress  theme designed for</p>
+                </div>
+            </div>
+            
+            </h1>
+
+        </div>
+
+        <div class="marquee">
+           <p class="subtitle">Trusted by leading brands in <br> accounting excellence</p>
+
+           <marquee behavior="alternate" direction="left">
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250eb4645715d8b2c1_Brand%20Logo%204.svg" alt="">&nbsp;&nbsp;
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d25046eef8355abc261_Brand%20Logo%205.svg" alt="">&nbsp;&nbsp;
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2474d2aa7563e97c44_Brand%20Logo%201.svg" alt="">&nbsp;&nbsp;&nbsp;
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2574d2aa7563e97d07_Brand%20Logo%202.svg" alt="">&nbsp;&nbsp;&nbsp;
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250b70a04ae8d5a93c_Brand%20Logo%203.svg" alt="">&nbsp;&nbsp;&nbsp;
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250eb4645715d8b2c1_Brand%20Logo%204.svg" alt="">&nbsp;&nbsp;&nbsp;
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d25046eef8355abc261_Brand%20Logo%205.svg" alt="">&nbsp;&nbsp;&nbsp;
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2474d2aa7563e97c44_Brand%20Logo%201.svg" alt="">&nbsp;&nbsp;&nbsp;
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2574d2aa7563e97d07_Brand%20Logo%202.svg" alt="">&nbsp;&nbsp;&nbsp;
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250b70a04ae8d5a93c_Brand%20Logo%203.svg" alt="">&nbsp;&nbsp;&nbsp;
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250eb4645715d8b2c1_Brand%20Logo%204.svg" alt="">&nbsp;&nbsp;&nbsp;
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d25046eef8355abc261_Brand%20Logo%205.svg" alt="">&nbsp;&nbsp;&nbsp;
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2474d2aa7563e97c44_Brand%20Logo%201.svg" alt="">&nbsp;&nbsp;&nbsp;
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2574d2aa7563e97d07_Brand%20Logo%202.svg" alt="">&nbsp;&nbsp;&nbsp;
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250b70a04ae8d5a93c_Brand%20Logo%203.svg" alt="">&nbsp;&nbsp;&nbsp;
+           </marquee>
+        </div>
+
+        <div class="success">
+            <h1 class="heading">Successful <span class="text-green">financial projects</span> <br> driving business growth.
+           <p class="subtitle">Thsum dolor sit amet consectetur. Egestas vel euismod bibendum elementum. Dolor tortor etiam diam nulla massa.</p>
+        </h1>
+           <div class="imgs">
+            <div class="img1">
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd3835/66c9ad693a7f2530ac545d0b_Project%20Image%206-p-500.jpg" alt=""  width="400" height="300">
+                <h2>Portfolio Diversification  Strategies   <i class="fa-solid fa-arrow-right"></i></h2>
+            </div>
+            <div class="img2">
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd3835/66c9ad70387b861aa81172c1_Project%20Image%205.jpg" alt="" width="400" height="300">
+                <h2>Long-Term Budget Development   <i class="fa-solid fa-arrow-right"></i></h2>
+            </div>
+            <div class="img3">
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd3835/66c9ad5bbea7984c4ae82da7_Project%20Image%204.jpg" alt="" width="400" height="300">
+                <h2>Fraud Detection Systems    <i class="fa-solid fa-arrow-right"></i></h2>
+            </div>
+        </div>
+            
+        
+        </div>
+
+        <div class="footer">
+            <div class="content">
+                <div class="lft">
+                    <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d26c433b36365c44106_Footer%20Logo.svg" alt="loading...">
+                    <p class="subtitle">Individuals around the globe, find a mentor, expand and learn <br> from incredible people.</p>
+                    <button class="main-btn">Contact Us</button>
+                </div>
+                <div class="rgt">
+                    <div class="first">
+                        <ul>
+                            <li>Main page</li>
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Service</li>
+                            <li>Blog</li>
+                            <li>FAQ</li>
+                            <li>Team</li>
+                        </ul>
+                    </div>
+                    <div class="second">
+                        <ul>
+                            <li>Inner page</li>
+                            <li>Blog details</li>
+                            <li>Service details</li>
+                            <li>Team details</li>
+                            <li>Price</li>
+                            <li>Project</li>
+                            <li>Project  details</li>
+                        </ul>
+                    </div>
+                    <div class="third">
+                       <ul>
+                        <li>Utility pages</li>
+                        <li>Style Guide</li>
+                        <li>Change log</li>
+                        <li>404 page</li>
+                        <li>Licenses</li>
+                        <li>Protected</li>
+                       </ul> 
+                    </div>
+                </div>
+            </div>
+            <div class="icons">
+                <div class="lft1">
+                    <h2>Powered by <span class="text-green">Webflow</span> | Designed by <span class="text-green">WebOcean</span></h2>
+                </div>
+                <div class="rgt1">
+                    <ul>
+                        <li><i class="fa-brands fa-instagram"></i> </li>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                        <li> <i class="fa-brands fa-linkedin"></i></li>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.initore ();
+    </script>
+</body>
+
+</html>

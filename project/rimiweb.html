@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIMI web</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color:#0c0c0c; 
+            color: white;
+        }
+       
+        #header{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: space-between;
+            box-shadow: 0px 3px 5px #ccc;
+            padding: 30px 50px;
+           
+        }
+        #header img{
+            width: 150px;
+            margin-left:30px ;
+        }
+        #header #nav{
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-right: 50px;
+        }
+        #header #nav li a{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: large;
+
+        }
+        #header #nav li:nth-child(1) a{
+            color: #caf31e;
+        }
+        #header #nav li:hover a{
+                color: #caf31e;
+               
+        }
+        #section{
+            margin-top: 50px;
+            border-bottom: 0px 0px 1px #fff ;
+            
+        }
+        
+        #section h1{
+             font-size: 100px;
+             font-weight: 600;
+             color: #ffffff;
+             line-height: 1.2;
+            
+        }
+        .devider{
+            height: 1px;
+            width: 90%;
+            background-color: rgb(53, 53, 53);
+           margin-left: 60px;
+            
+        }
+        
+        .text-main{
+            color: #caf31e;
+        }
+        .main-btn{
+            border: none;
+            padding: 18px 55px;
+            background-color: #232424;
+            margin-top: 20px;
+            margin-bottom: 100px;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 0.2rem;
+        }
+       .main-btn:hover{
+            background-color: #2e302f;
+            cursor: pointer;
+            transition: 1s;
+        }
+        .about{
+            width: 100%;
+            height: 500px;
+            background-color: rgb(14, 15, 15);
+            display: flex;
+        }
+        .left{
+            /* background-color: blue; */
+            padding: 70px;
+            font-size: 2.5rem;
+            flex:1;
+
+        }
+        .right{
+            
+            flex:1;
+            /* background-color: blue; */
+            padding: 70px;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            display: block;
+        }
+        
+        .lock{
+            width: 100%;
+            height:100px;
+            
+            display: flex;
+            border-radius: 20px;
+            gap:30px;
+            margin-top: 20px;
+            
+            
+        }
+        .lk1{
+           flex: 1;
+           background-color: rgb(42, 42, 41) ;
+           border-radius: 20px;
+           /* margin-top: 10px; */
+           padding:20px 25px;
+           text-align: left;
+           justify-content: center;
+          
+        }
+        .lk1 h2,.lk2 h2{
+            color: #fff;
+            margin-bottom: 5px;
+            background-color: #292a2a;
+        }
+        .lk1 p,.lk2 p{
+            color: #caf31e;
+            margin-bottom:20px;
+            font-size: 1.5rem;
+            background-color: #292a2a;
+        }
+        .lk2{
+            flex: 1;
+            background-color: rgb(42, 42, 41);
+            border-radius: 20px;
+            padding:20px 25px;
+           text-align: left;
+           justify-content: center;
+        }
+        .about .main-btn{
+            margin-top: 60px;
+            padding: 30px 50px;
+            font-size: 1.2rem;
+        }
+       #article{
+        height: 80vh;
+        padding: 70px ;
+       }
+       #article img{
+        border-radius: 30px;
+       }
+       #article h2{
+        color:#caf31e;
+        background-color: #121212;
+       }
+       #article  h2{
+        background-color: #121212;
+       }
+       
+       .mage{
+        background-color: rgb(23, 24, 24);
+        border-radius:32px ;
+       }
+       .content{
+        background-color: rgb(15, 15, 15);
+        border-radius: 10px;
+        padding: 20px 20px;
+       }
+       .image{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 30px;
+       }
+       .img1{
+          flex: 1;
+       }
+       .img2{
+          flex: 1;
+       }
+        .content:hover{
+        background:linear-gradient( #2e302f, #2e302f);
+       }
+       
+       .image1{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 70px;
+       }
+       .img3{
+          flex: 1;
+       }
+       .img4{
+          flex: 1;
+       }
+
+       .award{
+           display:flex;
+           align-items: start;
+           justify-content: space-between; 
+           margin-top: 140vh; 
+           
+       }
+       .batch1{
+        flex:1;
+        margin: 60px;
+        font-size: 1.5rem;
+       }
+       .batch{
+          flex:1;
+          margin: 80px;
+          margin-top: 50px;
+       }
+       .batch .right h1{
+            font-size:3rem;
+       }
+       .award .content{
+        margin-top: 30px;
+       }
+       .content h4{
+        color: #caf31e;
+       }
+       #footer{
+            padding: 3%;
+            min-height: 70vh;
+            background-color: #0c0c0c;
+            color: #fff;
+            display: flex;
+            gap: 10px;
+        }
+        #footer .subtile{
+            font-size: 1.5rem;
+            margin-top: 8px;
+            flex:2;
+           
+        }
+        #footer ul{
+            list-style-type: none;
+            padding: 0px;
+        }
+        #footer ul li{
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+        #footer ul li a{
+            text-decoration: none;
+            color: #ccc;
+        }
+       
+        .footer-card{
+            flex: 2;
+        }
+        .footer-card:nth-child(1){
+            flex: 2;
+        }
+        .footer-card:nth-child(4){
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="https://cdn.prod.website-files.com/66c79cdaff2cc66972a7a7bc/66cb1c8f1472f15e9aa59cc0_RIMI..svg" alt="logo is loading...">
+        <ul id="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            
+        </ul>
+    </div>
+
+    <div id="section">
+        <center>
+            <h1>Hi from Rimi, <br><span class="text-main">Award-Winning</span> <br>Designer!</h1>
+        <button class="main-btn">HIRE ME</button>
+        </center>
+    </div>
+    <div class="devider"></div>
+
+    <section class="about">
+        <div class="left"><h1>About Me</h1></div>
+        <div class="right">
+                <p>Hi, I’m Rimi, an award-winning designer specializing in 3D design, product design, and mockups. My work is all about merging creativity with precision to craft compelling and functional designs. With a strong foundation in both the visual and technical aspects of design, I create experiences that not only look great but also work seamlessly.</p>
+           <div class="lock">
+               <div class="lk1">
+                   <h2>Email</h2>
+                   <p>hi@rimi.design</p>
+            </div>
+                <div class="lk2">
+                    <h2>Phone</h2>
+                    <p>(1)2358657490</p>
+            </div>
+           </div>
+           <button class="main-btn">MORE ABOUT ME</button>
+        </div>
+    </section>
+    <div class="devider"></div> 
+   
+
+    <div id="article">
+          <h1 style="font-size: 50px;">Featured Work</h1>
+          <div class="image">
+            <div class="mage">
+                <div class="img1">
+                    <img src="https://cdn.prod.website-files.com/66c8e5bad271356afaf4146f/66c8e88c4d4085d828745761_Creative%20Design-p-800.jpg" alt="wait.." width="500" height="500">
+                    </div>
+                <div class="content">
+                    <h1 style="color: #caf31e;font-size: 25px;">MOCKUPS</h1> 
+                    <h1>Graphic Design Solutions </h1>
+                </div>
+                
+                </div>
+                <div class="mage">
+                    <div class="img2">
+                        <img src="https://cdn.prod.website-files.com/66c8e5bad271356afaf4146f/66c8e885136f7613204f074b_Illustration%20Art.jpg" alt="wait.." width="500" height="500"></div>
+                        <div class="content">
+                            <h1 style="color: #caf31e;font-size: 25px;">3D Design </h1>
+                            <h1>Illustruative Art </h1>
+                        </div>
+                </div>
+            </div>
+
+          <div class="image1">
+            <div class="mage">
+                <div class="img3">
+                    <img src="https://cdn.prod.website-files.com/66c8e5bad271356afaf4146f/66c8e87d5ad851a47240244d_Paper%20Design-p-800.jpg" alt="wait.." width="500" height="500"></div>
+                    <div class="content">
+                        <h1 style="color: #caf31e;font-size: 25px;">PRODUCT DESIGN</h1>
+                        <h1>Packaging Design</h1>
+                  </div>
+                  </div>
+                
+            
+           <div class="mage">
+            <div class="img4">
+                <img src="https://cdn.prod.website-files.com/66c8e5bad271356afaf4146f/66c8e8739fa765e0ca641c52_Design%20Mockup-p-800.jpg" alt="wait.." width="500" height="500"></div>
+                <div class="content">
+                    <h1 style="color: #caf31e;font-size: 25px;">PRODUCT DESIGN</h1>
+                    <h1>Branding & Mockups</h1>
+                </div> 
+           </div>
+            </div>
+        </div>    
+    </div>
+    
+
+    <div class="award">
+        <div class="batch1">
+            <h1>Our Awards</h1>
+        </div>
+        <div class="batch">
+           <section class="right">
+            <div class="content">
+                <div class="t1">
+                    <h1>Webflow Award</h1>
+                    <h4>2024</h4>
+                </div>
+                </div>
+                <div class="content">
+                    <div class="t1">
+                        <h1>Mockup Mastery</h1>
+                        <h4>2023</h4>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="t1">
+                        <h1> Design Excellance</h1>
+                        <h4>2022</h4>
+                    </div>
+                </div>
+            
+           </section>
+        </div>
+    </div>
+    <div class="devider"></div>
+
+    <div id="footer">
+        <div class="footer-card">
+                <img src="https://cdn.prod.website-files.com/66c79cdaff2cc66972a7a7bc/66cb1c8f1472f15e9aa59cc0_RIMI..svg" alt="loading" width="100">
+                <p class="subtile">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+            </div>
+            <div class="footer-card">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Works</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">Works Category</a></li>
+                </ul>
+            </div>
+            <div class="footer-card">
+                <ul>
+                    <li><a href="#">Style Guide</a></li>
+                    <li><a href="#">Changelog</a></li>
+                    <li><a href="#">Licence</a></li>
+                    <li><a href="#">Password</a></li>
+                    <li><a href="#">404</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer-card">
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">X(Twitter)</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Dribbble</a></li>
+                </ul>
+            </div>
+    </div><hr>
+</body>
+</html> 
