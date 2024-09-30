@@ -18,18 +18,18 @@ header img{
     margin: 10px;
     margin-left: 65px;
 }
-ul{
+nav ul{
     display: flex;
     align-items: center;
     gap: 20px;
     margin-right: 65px;
 }
-ul li {
+nav ul li {
     list-style-type:none ;
     padding: 20px;
     font-size: 17px;
 }
-ul li a{
+nav ul li a{
     text-decoration: none;
     color: #fff;
 }
@@ -49,8 +49,6 @@ ul li a{
     line-height: 3.8rem;
     margin: 30px 85px;
     color: #fff;
-
-
 }
 .content{
     display: flex;
@@ -108,7 +106,7 @@ ul li a{
     font-size: 18px;
    line-height: 2rem;
 }
-.left1 .main-btn1{
+.main-btn1{
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
@@ -152,7 +150,13 @@ ul li a{
     display: grid;
     display: flex;
     background-color: #f7ebdf;
-   
+}
+.Gallery img{
+    filter:saturate(10%);
+    cursor:pointer;
+}
+.Gallery img:hover{
+    filter: brightness(80%);
 }
 .menu{
     display: flex;
@@ -194,7 +198,19 @@ ul li a{
     line-height: 1.5rem;
 }
 .divider{
-    border:1px solid lightgray;
+    height: 1px;
+    width: 100%;
+    background-color: rgb(53, 53, 53);
+}
+.header1 ul{
+    list-style-type: none;
+    display: flex;
+    padding: 20px;
+    gap:88px;
+
+}
+.header1 ul li a{
+    text-decoration: none;
 }
 .header1 ul li a{
        color:brown;    
@@ -211,7 +227,6 @@ ul li a{
     padding: 35px 0px;
     font-size: 30px;
 }
-
 .cards{
     display: flex;
     align-items: center;
@@ -219,17 +234,117 @@ ul li a{
 }
 .card1{
     display: block;
-    border:1px solid lightgray;
+    border:1px solid rgb(241, 238, 238);
+    margin-bottom: 20px;
+    height: 540px;
 }
 .card1 h3{
     font-size: 22px;
-    padding: 20px 0px;
+    padding: 20px 10px;
 }
 .card1 a{
     text-decoration: none;
-    color:#000;  
+    color:#000;
+    padding: 10px;
 }
-.card1:hover{
-   transform: scale(1.1);
-   transition: 0.5s;
-}    
+.card1 img{
+    object-fit: cover;
+}
+.card1 img:hover{
+    transform:scale(1.1);
+   transition-duration: 0.9s;  
+}  
+.booking{
+    width: 100%;
+    height: 600px;
+    background-image:url(https://cdn.prod.website-files.com/66858c02485f6868a3f2841e/66a5fcbec13e4846ee8e0dd5_book%20table.jpg);
+    /* filter: brightness(70%); */
+    background-repeat: no-repeat;
+    background-size: 100% 150%,cover; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+.lft{
+   flex:1;
+}
+.rgt{
+   width:500px;
+   height:500px;
+   background-color: #fff;
+   margin: 20px 50px;
+   display: flex;
+}
+.rgt form{
+    padding: 30px;
+}
+.rgt form input{
+    border:none;
+    border-bottom: 1px solid #000;
+}
+.rgt form input[type="text"]{
+    padding: 2%;
+}
+.marquee{
+    display: grid;
+    display: flex;
+    background-color: #f7ebdf;
+}
+.marquee img{
+    width: 200px;
+    height: 200px;    
+}
+.heading2{
+    text-align: center;
+    font-size: 25px;
+    padding:30px 10px;
+}
+footer{
+    background-color: #000;
+    color: #fff;  
+}
+.cards{
+    display: flex;
+    align-items: start;
+}
+footer .footer-card{
+    
+    margin: 20px 70px;
+}
+.footer-card p{
+    padding: 10px;
+    line-height: 1.5rem;
+    font-size: 17px;
+}
+.footer-card:nth-child(1){
+    width:30%;
+}
+.footer-card ul{
+    list-style-type: none;
+    padding: 0px;
+}
+.footer-card ul li{
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+.footer-card ul li a{
+    text-decoration: none;
+    color: #ccc;
+}
+.footer-card ul li a:hover{
+    color:#fff;
+}
+.rights{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+}
+.one{
+    flex:1;
+    padding: 30px;
+    margin: 0px 70px;
+}
+.two{
+    flex:1;
+}
+
