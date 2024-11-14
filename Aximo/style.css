@@ -70,7 +70,7 @@ header nav ul li a {
 .left button{
     margin-top: 25px;
 }
-.left .btn{
+ .btn{
   padding: 20px;
   border-radius: 100px;
   border:none;
@@ -81,7 +81,7 @@ cursor: pointer;
 transition: linear;
 font-weight: 500;
 }
-.left .btn:hover{
+ .btn:hover{
     background-color:#ff8064 ;
 }
 .left .special-btn{
@@ -130,4 +130,99 @@ font-weight: 500;
     100%{
         transform: rotate(360deg);
     }
+}
+.mission{
+    text-align: center;
+    margin: 85px 90px;
+    font-size: 48px;
+font-family:Arimo, sans-serif;
+position: relative;
+
+}
+.mission h1{
+    color: #191931;
+}
+.mission p{
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.img img{
+    width: 220px;
+    height: 140px;
+position: absolute;
+top:100%;
+left: 88%;
+animation:animation 6s infinite ease-in-out normal running;
+}
+@keyframes animation{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-40px);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.marquee{
+    background-color: #191931;
+    width: 95%;
+    height: 300px;
+    text-align: center;
+    margin: 210px 40px;
+    border-radius: 30px;
+}
+.marquee p{
+    padding-top: 70px;
+    color: #fff7ea;
+    padding-bottom: 70px;
+}
+.marquee img{
+    padding-right: 50px;
+}
+.services{
+width: 95%;
+height: 900px;
+
+margin: auto;
+padding: 50px;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+.left1 h1{
+    font-size: 70px;
+    font-weight: 700;
+    color: #191931;
+}
+.right1 .btn{
+margin-top: 110px;
+}
+#grids{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 80px;
+}
+#grids div{
+    width: 400px;
+    height: 330px;
+    
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #191931;
+}
+#grids div p{
+margin:15px 0px;
+color: #191931;
+}
+#grids div h2{
+    margin-top:15px;
+    font-size: 28px;
+color: #191931;
+}
+#grids div i .fa-arrow-right-long:hover{
+background-color: #ff8064;
 }
