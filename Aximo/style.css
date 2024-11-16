@@ -192,7 +192,7 @@ padding: 50px;
     display: flex;
     justify-content: space-between;
 }
-.left1 h1{
+.left1 h1,.right2 h1{
     font-size: 70px;
     font-weight: 700;
     color: #191931;
@@ -223,6 +223,142 @@ color: #191931;
     font-size: 28px;
 color: #191931;
 }
-#grids div i .fa-arrow-right-long:hover{
+#grids div a{
+    color: #191931;
+}
+#grids div a:hover{
+color: #ff8064;
+}
+.choice{
+    width: 90%;
+    height: 550px;
+    margin: auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 55px;
+    margin-top: 15%;
+    padding: 20px;
+    position: relative;
+}
+.choice .img1{
+position: absolute;
+top: -60px;
+left: -70px;
+animation:animation 6s infinite ease-in-out normal running;
+}
+
+.left2 img{
+border-radius: 20px;
+}
+.right2{
+    margin-top: 10px;
+}
+.right2 .pari span{
+font-weight: 700;
+color:#191931;
+margin-top: 10px;
+}
+.right2 .pari,.right2 h1+p{
+    color: #191931;
+    margin-top: 10px;
+}
+.division{
+    width: 95%;
+    height: 300px;
+    
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    
+    
+}
+.first,.second,.third{
+    height: 230px;
+    display: flex;
+    align-items: start;
+    /* justify-content: center; */
+    gap: 20px;
+    padding: 20px;
+    
+    border-top: 2px solid #585656;
+}
+.l3{
+    width: 10%;
+    height: 44px;
+    border:1px solid #000;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+    
+}
+.r3{
+    flex: 1;
+    margin-top: 20px;
+
+}
+.r3 p{
+font-size:20px;
+color: #191931;
+}
+.r3 p span{
+    font-size: 24px;
+}
+.first:hover .l3,.second:hover .l3,.third:hover .l3{
+color:#fff;
 background-color: #ff8064;
+border: none;
+
+}
+.first:hover,.second:hover,.third:hover{
+    border-top: 2px solid #ff8064;
+}
+.creation{
+width: 95%;
+min-height: 90%;
+background-color: #191931;
+text-align: center;
+margin: 210px 40px;
+border-radius: 30px;
+padding: 30px 0px;
+
+}
+.creation h1{
+    margin: 20px 0px;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff7ea;
+    
+}
+.parts{
+    display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+gap: 30px;
+}
+.l4 img,.r4 img{
+    border-radius: 20px;
+}
+.l4{
+flex: 1;
+text-align: left;
+}
+.r4{
+flex: 1;
+text-align: left;
+
+}
+.l4 h3 a,.r4 h3 a{
+text-decoration: none;
+font-size: 30px;
+color: #fff7ea;
+}
+.l4 p,.r4 p{
+    color: #fff7ea;
+    font-size:22px ;
+    margin-top: 10px;
 }
